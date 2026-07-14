@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink font-body antialiased;
+  }
+
+  ::selection {
+    @apply bg-gold-light text-burgundy-dark;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold tracking-wide transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-burgundy text-cream hover:bg-burgundy-dark hover:shadow-lg focus-visible:outline-burgundy;
+  }
+
+  .btn-gold {
+    @apply btn bg-gold text-burgundy-dark hover:bg-gold-light hover:shadow-lg focus-visible:outline-gold;
+  }
+
+  .btn-whatsapp {
+    @apply btn bg-[#25D366] text-white hover:bg-[#1EBE5A] hover:shadow-lg focus-visible:outline-[#25D366];
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-burgundy text-burgundy hover:bg-burgundy hover:text-cream focus-visible:outline-burgundy;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-bold text-burgundy sm:text-4xl;
+  }
+
+  .section-kicker {
+    @apply mb-2 inline-block text-xs font-semibold uppercase tracking-[0.25em] text-gold;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
