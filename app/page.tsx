@@ -2,40 +2,56 @@ import Image from "next/image";
 import Link from "next/link";
 import { featuredWork, services, site, whatsappLink } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
+import { HeroSlideshow } from "@/components/HeroSlideshow";
+
+const heroSlides = [
+  {
+    src: "/images/hero/hero-shop.png",
+    alt: "Custom printed gifts and apparel display",
+  },
+  {
+    src: "/images/hero/hero-bottles.png",
+    alt: "Personalized name water bottles",
+  },
+  {
+    src: "/images/hero/hero-keychains.png",
+    alt: "Custom branded keychains",
+  },
+  {
+    src: "/images/hero/hero-branding.png",
+    alt: "Branded caps, bottles and gift packaging",
+  },
+  {
+    src: "/images/hero/hero-mugs-fine.png",
+    alt: "Luxury marble mug gift sets",
+  },
+  {
+    src: "/images/hero/hero-mugs-couple.png",
+    alt: "Mr and Mrs ceramic mug gift set",
+  },
+  {
+    src: "/images/hero/hero-manye.png",
+    alt: "Manye, custom printing artist",
+  },
+];
 
 export default function HomePage() {
   return (
     <>
       {/* ---------- Hero ---------- */}
-      <section className="relative overflow-hidden bg-burgundy-dark text-cream">
-        <div
-          className="absolute inset-0 opacity-20"
-          aria-hidden="true"
-        >
-          <Image
-            src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&w=1800&q=80"
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
-        </div>
-        <div
-          className="absolute inset-0 bg-gradient-to-b from-burgundy-dark/60 via-transparent to-burgundy-dark"
-          aria-hidden="true"
-        />
-        <div className="container-site relative py-24 text-center sm:py-32">
-          <p className="animate-fade-up text-xs font-semibold uppercase tracking-[0.35em] text-gold-light">
+      <section className="relative min-h-[88vh] overflow-hidden bg-burgundy-dark text-cream sm:min-h-[92vh]">
+        <HeroSlideshow slides={heroSlides} />
+        <div className="container-site relative z-[1] flex min-h-[88vh] flex-col items-center justify-center py-24 text-center sm:min-h-[92vh] sm:py-32">
+          <p className="animate-fade-up text-xs font-semibold uppercase tracking-[0.35em] text-gold-light drop-shadow">
             Custom Printing Studio
           </p>
-          <h1 className="mx-auto mt-4 max-w-3xl animate-fade-up font-display text-4xl font-bold leading-tight sm:text-6xl">
+          <h1 className="mx-auto mt-4 max-w-3xl animate-fade-up font-display text-4xl font-bold leading-tight drop-shadow-lg sm:text-6xl">
             {site.name}
           </h1>
-          <p className="mx-auto mt-4 max-w-xl animate-fade-up font-display text-xl italic text-gold-light sm:text-2xl">
+          <p className="mx-auto mt-4 max-w-xl animate-fade-up font-display text-xl italic text-gold-light drop-shadow sm:text-2xl">
             {site.tagline}
           </p>
-          <p className="mx-auto mt-6 max-w-2xl animate-fade-up text-base leading-relaxed text-cream/85 sm:text-lg">
+          <p className="mx-auto mt-6 max-w-2xl animate-fade-up text-base leading-relaxed text-cream/90 drop-shadow sm:text-lg">
             Beautiful, lasting prints on shirts, books, souvenirs and funeral
             memorabilia. Every order handled personally, with the care that
             only thirty years of craft can give.

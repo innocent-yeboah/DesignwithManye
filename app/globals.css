@@ -50,9 +50,183 @@
   }
 }
 
+/* Hero digital-display accents */
+@keyframes hero-ken-burns {
+  from {
+    transform: scale(1.04);
+  }
+  to {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes hero-enter-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hero-exit-fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hero-enter-zoom {
+  from {
+    opacity: 0;
+    transform: scale(1.18);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes hero-exit-zoom {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+}
+
+@keyframes hero-enter-wipe-left {
+  from {
+    opacity: 0.35;
+    transform: translateX(8%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hero-exit-wipe-left {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-6%);
+  }
+}
+
+@keyframes hero-enter-wipe-up {
+  from {
+    opacity: 0.35;
+    transform: translateY(8%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-exit-wipe-up {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-6%);
+  }
+}
+
+@keyframes hero-enter-soft-blur {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(1.06);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+@keyframes hero-exit-soft-blur {
+  from {
+    opacity: 1;
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    filter: blur(8px);
+  }
+}
+
+.hero-ken-burns {
+  animation: hero-ken-burns 5s ease-out forwards;
+}
+
+.hero-enter,
+.hero-exit {
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+}
+
+.hero-enter-fade {
+  animation-name: hero-enter-fade;
+}
+.hero-exit-fade {
+  animation-name: hero-exit-fade;
+}
+.hero-enter-zoom {
+  animation-name: hero-enter-zoom;
+}
+.hero-exit-zoom {
+  animation-name: hero-exit-zoom;
+}
+.hero-enter-wipe-left {
+  animation-name: hero-enter-wipe-left;
+}
+.hero-exit-wipe-left {
+  animation-name: hero-exit-wipe-left;
+}
+.hero-enter-wipe-up {
+  animation-name: hero-enter-wipe-up;
+}
+.hero-exit-wipe-up {
+  animation-name: hero-exit-wipe-up;
+}
+.hero-enter-soft-blur {
+  animation-name: hero-enter-soft-blur;
+}
+.hero-exit-soft-blur {
+  animation-name: hero-exit-soft-blur;
+}
+
+.hero-scanlines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 2px,
+    rgba(255, 255, 255, 0.35) 2px,
+    rgba(255, 255, 255, 0.35) 3px
+  );
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .hero-ken-burns {
+    animation: none;
   }
 
   *,
