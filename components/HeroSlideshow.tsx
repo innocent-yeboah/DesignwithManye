@@ -142,28 +142,6 @@ export function HeroSlideshow({ slides }: { slides: HeroSlide[] }) {
         className="pointer-events-none absolute inset-0 z-[2] bg-burgundy-dark/15"
         aria-hidden="true"
       />
-
-      <div
-        role="tablist"
-        aria-label="Hero gallery"
-        className="absolute bottom-5 left-1/2 z-[3] flex -translate-x-1/2 gap-2"
-      >
-        {slides.map((_, index) => (
-          <button
-            key={labels[index]}
-            type="button"
-            role="tab"
-            aria-selected={index === active}
-            aria-label={labels[index]}
-            onClick={() => advance(index)}
-            className={`h-1.5 rounded-full transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
-              index === active
-                ? "w-8 bg-gold"
-                : "w-1.5 bg-cream/45 hover:bg-cream/80"
-            }`}
-          />
-        ))}
-      </div>
     </div>
   );
 }
