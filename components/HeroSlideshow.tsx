@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export interface HeroSlide {
@@ -45,19 +45,6 @@ export function HeroSlideshow({ slides }: { slides: HeroSlide[] }) {
   const [tick, setTick] = useState(0);
   const [reduceMotion, setReduceMotion] = useState(false);
 
-  const advance = useCallback(
-    (next: number, kind?: TransitionKind) => {
-      setActive((current) => {
-        if (next === current) return current;
-        setPrev(current);
-        setTransition(kind ?? pickRandomTransition());
-        setTick((value) => value + 1);
-        return next;
-      });
-    },
-    []
-  );
-
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
     setReduceMotion(media.matches);
@@ -85,11 +72,6 @@ export function HeroSlideshow({ slides }: { slides: HeroSlide[] }) {
     }, INTERVAL_MS);
     return () => window.clearInterval(timer);
   }, [reduceMotion, slides.length]);
-
-  const labels = useMemo(
-    () => slides.map((slide, index) => `Show image ${index + 1}: ${slide.alt}`),
-    [slides]
-  );
 
   return (
     <div className="absolute inset-0 overflow-hidden">
