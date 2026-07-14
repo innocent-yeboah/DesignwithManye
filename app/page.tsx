@@ -31,7 +31,7 @@ const heroSlides = [
   },
   {
     src: "/images/hero/hero-manye.png",
-    alt: "Manye, custom printing artist",
+    alt: "DesignwithManye studio portrait",
   },
 ];
 
@@ -42,33 +42,35 @@ export default function HomePage() {
       <section className="relative min-h-[88vh] overflow-hidden bg-burgundy-dark text-cream sm:min-h-[92vh]">
         <HeroSlideshow slides={heroSlides} />
         <div className="container-site relative z-[1] flex min-h-[88vh] flex-col items-center justify-center py-24 text-center sm:min-h-[92vh] sm:py-32">
-          <p className="animate-fade-up text-xs font-semibold uppercase tracking-[0.35em] text-gold-light drop-shadow">
-            Custom Printing Studio
-          </p>
-          <h1 className="mx-auto mt-4 max-w-3xl animate-fade-up font-display text-4xl font-bold leading-tight drop-shadow-lg sm:text-6xl">
-            {site.name}
-          </h1>
-          <p className="mx-auto mt-4 max-w-xl animate-fade-up font-display text-xl italic text-gold-light drop-shadow sm:text-2xl">
-            {site.tagline}
-          </p>
-          <p className="mx-auto mt-6 max-w-2xl animate-fade-up text-base leading-relaxed text-cream/90 drop-shadow sm:text-lg">
-            Beautiful, lasting prints on shirts, books, souvenirs and funeral
-            memorabilia. Every order handled personally, with the care that
-            only thirty years of craft can give.
-          </p>
-          <div className="mt-10 flex animate-fade-up flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/portfolio" className="btn-gold w-full sm:w-auto">
-              View Portfolio
-            </Link>
-            <a
-              href={whatsappLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-whatsapp w-full sm:w-auto"
-            >
-              <WhatsAppIcon className="h-4 w-4" />
-              WhatsApp Us
-            </a>
+          <div className="max-w-3xl rounded-3xl bg-black/25 px-6 py-8 backdrop-blur-[2px] sm:px-10 sm:py-10">
+            <p className="animate-fade-up text-xs font-semibold uppercase tracking-[0.35em] text-gold-light">
+              Custom Printing Studio
+            </p>
+            <h1 className="mx-auto mt-4 animate-fade-up font-display text-4xl font-bold leading-tight text-white sm:text-6xl">
+              {site.name}
+            </h1>
+            <p className="mx-auto mt-4 animate-fade-up font-display text-xl italic text-gold-light sm:text-2xl">
+              {site.tagline}
+            </p>
+            <p className="mx-auto mt-6 max-w-2xl animate-fade-up text-base leading-relaxed text-white/95 sm:text-lg">
+              Beautiful, lasting prints on shirts, books, souvenirs and funeral
+              memorabilia. Every order handled personally, with the care that
+              only thirty years of craft can give.
+            </p>
+            <div className="mt-10 flex animate-fade-up flex-col items-center justify-center gap-4 sm:flex-row">
+              <Link href="/portfolio" className="btn-gold w-full sm:w-auto">
+                View Portfolio
+              </Link>
+              <a
+                href={whatsappLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-whatsapp w-full sm:w-auto"
+              >
+                <WhatsAppIcon className="h-4 w-4" />
+                WhatsApp Us
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -178,7 +180,7 @@ export default function HomePage() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
             <Image
               src="/images/manye.jpg"
-              alt="Manye, custom printing artist"
+              alt="DesignwithManye studio portrait"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-top"

@@ -28,9 +28,6 @@ export function Header() {
           <span className="font-display text-xl font-bold text-burgundy">
             {site.shortName}
           </span>
-          <span className="hidden text-[11px] font-semibold uppercase tracking-[0.2em] text-gold sm:inline">
-            Prints
-          </span>
         </Link>
 
         <nav aria-label="Main navigation" className="hidden items-center gap-1 md:flex">

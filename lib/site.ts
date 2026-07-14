@@ -6,8 +6,8 @@
  */
 
 export const site = {
-  name: "Manye",
-  shortName: "Manye",
+  name: "DesignwithManye",
+  shortName: "DesignwithManye",
   tagline: "30 Years of Quality Printing",
   description:
     "Custom printing on shirts, books, souvenirs and funeral memorabilia. Three decades of craft, care and colour — every piece made to be remembered.",
@@ -22,7 +22,7 @@ export const site = {
   whatsappMessage:
     "Hello, I am interested in your printing services. Here is what I need...",
 
-  email: "hello@manye.com",
+  email: "hello@designwithmanye.com",
   phoneDisplay: "+233 55 481 2855",
 
   /** Physical shop — set address to "" to hide the map section */

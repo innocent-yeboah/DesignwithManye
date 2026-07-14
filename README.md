@@ -1,6 +1,6 @@
-# Manye Prints
+# DesignwithManye
 
-Portfolio and booking website for **Manye** — 30 years of quality
+Portfolio and booking website for **DesignwithManye** — 30 years of quality
 custom printing on shirts, books, souvenirs and funeral memorabilia.
 
 Built with **Next.js 14 (App Router)**, **TypeScript** and **Tailwind CSS**.

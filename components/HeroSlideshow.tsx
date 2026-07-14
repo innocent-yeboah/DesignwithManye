@@ -133,16 +133,13 @@ export function HeroSlideshow({ slides }: { slides: HeroSlide[] }) {
         );
       })}
 
+      {/* Soft edge shade only — keeps photos clear in the center */}
       <div
-        className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-b from-burgundy-dark/75 via-burgundy-dark/45 to-burgundy-dark/90"
+        className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-b from-black/35 via-transparent to-black/50"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute inset-0 z-[2] bg-[radial-gradient(ellipse_at_center,transparent_20%,rgba(43,21,26,0.55)_100%)]"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute inset-0 z-[2] opacity-[0.06] mix-blend-overlay hero-scanlines"
+        className="pointer-events-none absolute inset-0 z-[2] bg-burgundy-dark/15"
         aria-hidden="true"
       />
 
